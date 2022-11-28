@@ -1,7 +1,16 @@
+import React from "react";
+import {useState} from "react";
+
 
 function App() {
+
+  const ([])
+
   return (
     <div className="App">
+      <div className="firstCard">
+        <p className="cardNumber">123</p>
+      </div>
       <div className='colLeft column'>
       </div>
       <div className='colRight column'>
@@ -23,6 +32,7 @@ function App() {
               <input type="number" placeholder="123"></input>
             </div>
           </div>
+          <button type="submit">Confirm</button>
         </form>
       </div>
     </div>

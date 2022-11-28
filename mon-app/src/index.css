@@ -75,3 +75,35 @@ label{
 .inputs > div{
   width: 45%;
 }
+
+button{
+  background: black;
+  color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease 300ms;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+.firstCard{
+  height: 250px;
+  width: 400px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  background: url('./img/bg-card-front.png') center center no-repeat;
+  background-size: cover;
+}
+
+.cardNumber{
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  
+}
