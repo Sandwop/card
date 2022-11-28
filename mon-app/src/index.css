@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .App{
@@ -16,10 +19,59 @@
 
 .colLeft{
   width: 30%;
-  background: blue
+  background: url(./img/bg-main-desktop.png) center center no-repeat;
+  background-size: cover;
 }
 
 .colRight{
   width: 70%;
-  background-color: green;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+input{
+  margin-bottom: 20px;
+  height: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px hsl(270, 3%, 87%);
+  padding: 5px;
+}
+
+label{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.dates{
+  width: 45%;
+}
+
+.dates input{
+  width: 50px;
+  margin-right: 10px;
+}
+
+.dates label{
+  display: block;
+}
+
+.inputs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs > div{
+  width: 45%;
 }
