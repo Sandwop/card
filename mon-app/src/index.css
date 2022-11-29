@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
 
 *{
   margin: 0;
@@ -100,10 +100,64 @@ button:hover{
   background-size: cover;
 }
 
+.firstCard:before{
+  content: "";
+  position: absolute;
+  background: white;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  left: 10%;
+  border-radius: 50%;
+}
+
+.firstCard:before{
+  content: "";
+  position: absolute;
+  background: white;
+  height: 40px;
+  width: 40px;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+}
+
+.firstCard:after{
+  content: "";
+  position: absolute;
+  background: transparent;
+  border: solid 1px white;
+  height: 20px;
+  width: 20px;
+  top: calc(10% + 10px);
+  left: 25%;
+  border-radius: 50%;
+}
+
 .cardNumber{
   color: white;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  
+  bottom: 25%;
+  left: 10%;
+  width: 100%;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.cardName{
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.cardDate{
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 10%;
+  font-size: 16px;
+  font-weight: 400;
 }
