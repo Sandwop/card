@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from "react";
+import valid from './img/icon-complete.svg'
 
 
 function App() {
@@ -15,10 +16,17 @@ function App() {
 
   const [cvc, setCvc] = useState('');
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    setIsSubmit(true);
+  }
+
+  const [isSubmit, setIsSubmit] = useState(false);
+
 
 
   return (
-    <div className="App">
+    <div className={isSubmit ? "App submit" : "App notSubmit"}>
       <div className="firstCard">
         <p className="cardNumber" >{Array.isArray(format) ? format.join(' ') : '0000 0000 0000 0000'}</p>
         <p className="cardName" >{name.length > 0 ? name : 'Jane Appleseed'}</p>
@@ -30,7 +38,7 @@ function App() {
       <div className='colLeft column'>
       </div>
       <div className='colRight column'>
-        <form>
+        <form  onSubmit={handleSubmit}>
           <label>Cardholder name</label>
           <input type="text" placeholder="e.g. Jane Appleseed" value={name} onChange={e => setName(e.target.value)}></input>
           <label>Card number</label>
@@ -50,6 +58,10 @@ function App() {
           </div>
           <button type="submit">Confirm</button>
         </form>
+        <div className="formComplete">
+          <p>Form completed</p>
+          <img src={valid} alt='Form completed' />
+        </div>
       </div>
     </div>
   );

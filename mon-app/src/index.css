@@ -10,7 +10,6 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  background-color: tomato;
 }
 
 .column{
@@ -29,11 +28,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 form{
   display: flex;
   flex-direction: column;
+  width: 350px;
+  transition: all ease 300ms;
+}
+
+.submit form{
+  transform: scale(0);
+}
+
+.formComplete{
+  transition: all ease 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.submit .formComplete{
+  transform: translate(-50%, -50%) scale(1);
   width: 350px;
 }
 
@@ -98,6 +121,7 @@ button:hover{
   top: 10%;
   background: url('./img/bg-card-front.png') center center no-repeat;
   background-size: cover;
+  z-index: 4;
 }
 
 .secondCard{
@@ -109,6 +133,7 @@ button:hover{
   top: 50%;
   background: url('./img/bg-card-back.png') center center no-repeat;
   background-size: cover;
+  z-index: 5;
 }
 
 .firstCard:before{
@@ -181,4 +206,52 @@ button:hover{
   font-size: 16px;
   font-weight: 400;
   transform: translateY(-50%);
+}
+
+@media (max-width : 450px) {
+  .App{
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .colLeft{
+    width: 100%;
+    height: 35%;
+  }
+
+  .colRight{
+    width: 100%;
+    height: 65%;
+  }
+
+  .firstCard{
+    height: 180px;
+    width: 300px;
+    top: 20%;
+    left: 5%;
+    z-index: 2;
+  }
+
+  .secondCard{
+    height: 180px;
+    width: 300px;
+    top: 10%;
+    right: 5%;
+    z-index: 1;
+  }
+
+  .firstCard p{
+    font-size: 16px;
+  }
+
+  .firstCard:before{
+    height: 30px;
+    width: 30px;
+  }
+  
+  .firstCard:after{
+    height: 15px;
+    width: 15px;
+    top: calc(10% + 7px);
+  }
 }
