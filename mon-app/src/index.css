@@ -94,9 +94,20 @@ button:hover{
   width: 400px;
   border-radius: 20px;
   position: absolute;
-  left: 20%;
+  left: 15%;
   top: 10%;
   background: url('./img/bg-card-front.png') center center no-repeat;
+  background-size: cover;
+}
+
+.secondCard{
+  height: 250px;
+  width: 400px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  background: url('./img/bg-card-back.png') center center no-repeat;
   background-size: cover;
 }
 
@@ -160,4 +171,14 @@ button:hover{
   right: 10%;
   font-size: 16px;
   font-weight: 400;
+}
+
+.cardCvc{
+  color: white;
+  position: absolute;
+  top: 49%;
+  right: 7%;
+  font-size: 16px;
+  font-weight: 400;
+  transform: translateY(-50%);
 }

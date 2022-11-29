@@ -13,14 +13,19 @@ function App() {
 
   const [year, setYear] = useState('');
 
+  const [cvc, setCvc] = useState('');
+
+
 
   return (
     <div className="App">
       <div className="firstCard">
         <p className="cardNumber" >{Array.isArray(format) ? format.join(' ') : '0000 0000 0000 0000'}</p>
         <p className="cardName" >{name.length > 0 ? name : 'Jane Appleseed'}</p>
-        <p className="cardDate" >{month.length > 0 ? month : '00'}/{year.length > 0 ? month : '00'}</p>
-        
+        <p className="cardDate" >{month.length > 0 ? month : 'oo'}/{year.length > 0 ? year : 'oo'}</p>
+      </div>
+      <div className="secondCard">
+        <p className="cardCvc" >{cvc.length > 0 ? cvc : 'ooo'}</p>
       </div>
       <div className='colLeft column'>
       </div>
@@ -34,13 +39,13 @@ function App() {
             <div className="dates">
               <label>Exp. date (mm/y)</label>
               <div>
-                <input type='number' placeholder="MM" value={month} onChange={e => setMonth(e.target.value)}></input>
-                <input type='number' placeholder="YY" value={year} onChange={e => setYear(e.target.value)}></input>
+                <input type='tel' maxlength="2" placeholder="MM" value={month} onChange={e => setMonth(e.target.value)}></input>
+                <input type='tel' maxlength="2" placeholder="YY" value={year} onChange={e => setYear(e.target.value)}></input>
               </div>
             </div>
             <div>
               <label>CVC</label>
-              <input type="number" placeholder="123"></input>
+              <input type="tel" maxlength="3" placeholder="123" value={cvc} onChange={e => setCvc(e.target.value)}></input>
             </div>
           </div>
           <button type="submit">Confirm</button>
